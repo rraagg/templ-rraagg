@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	component := hello("Rob")
+	component := hello("rraagg")
 	http.Handle("/", templ.Handler(component))
 	fmt.Println("Listening on :3000")
 	http.ListenAndServe(":3000", nil)
