@@ -1,0 +1,26 @@
+package main
+
+css headerCSS() {
+	background: url("/static/images/rraagg.jpg");
+	display: flex;
+	height: 120px;
+	align-items: center;
+	justify-content: center;
+	font: bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+    fantasy;
+	color: #ff0083;
+	text-shadow: #000 2px 2px 0.2rem;
+}
+
+templ head(title string) {
+	<head>
+		<script src="htmx.min.js"></script>
+		<link href="styles/styles.css" rel="stylesheet"/>
+	</head>
+	<title>{ title }</title>
+}
+
+templ header(headerText, title string) {
+	@head(title)
+	<header class={ headerCSS() }>{ headerText }</header>
+}

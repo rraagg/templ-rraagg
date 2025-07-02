@@ -1,12 +1,17 @@
 package main
 
-templ button() {
+css red() {
+	background-color: #ff0000;
+}
+
+templ button(text string, isPrimary bool) {
 	<button
 		hx-post="/clicked"
 		hx-trigger="click"
 		hx-target="#parent-div"
 		hx-swap="outerHTML"
+		class={ templ.KV("is-primary", isPrimary), templ.KV(red(), isPrimary) }
 	>
-		Click Me!
+		{ text }
 	</button>
 }

@@ -1,7 +1,7 @@
 package main
 
 templ hello(name string) {
-	<script src="htmx.min.js"></script>
+	@header("Welcome to rraagg!", "Welcome to rraagg!")
 	<div>Hello, { name }</div>
-	@button()
+	@button("Click Me!", true)
 }
