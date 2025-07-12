@@ -1,4 +1,4 @@
 *_templ.go
 .env
 .DS_Store
-./test.db
+*.db
